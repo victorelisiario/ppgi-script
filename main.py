@@ -12,7 +12,7 @@ service = Service(executable_path="chromedriver.exe")
 driver = webdriver.Chrome(service=service)
 
 # Opens webpage
-url = "https://globo.com"
+url = "https://www.uol.com.br/universa/noticias/redacao/2024/05/29/apos-13-anos-de-espera-professora-consegue-ser-mae-por-meio-da-busca-ativa.htm"
 driver.get(url)
 time.sleep(10)
 
