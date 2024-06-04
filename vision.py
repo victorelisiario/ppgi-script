@@ -3,18 +3,21 @@ import json
 
 from google.cloud import vision
 
+import uuid
+
 #KEY
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'vison-key.json'
 
 # Instantiates a client
 client = vision.ImageAnnotatorClient()
 
-
-file_uri = 'https://p2.trrsf.com/image/fget/cf/306/168/smart/images.terra.com/2024/05/27/1496157463-greve-taxistas-sao-jose-dos-pinhais-aeroporto-2.jpg'
+url = input("Insira o link da imagem: ")
+imageID = uuid.uuid4().hex
 
 image = vision.Image()
-image.source.image_uri = file_uri
+image.source.image_uri = url
 
+vision_data = []
 
 #### LABEL DETECTION ######
 def labelDetection():
@@ -26,10 +29,8 @@ def labelDetection():
     print({'label': label.description, 'score': label.score})
     labels.append({'label': label.description, 'score': label.score})
 
-  with open('vision-data/labels.json', 'w') as f:
-    json.dump(labels, f)
+  vision_data.append({'labels': labels})
   
-
 #### FACE DETECTION ######
 def faceDetection():
   response = client.face_detection(image=image)
@@ -48,9 +49,7 @@ def faceDetection():
       faces.append(face)
       print(face)
   
-  with open('vision-data/faces.json', 'w') as f:
-    json.dump(faces, f)
-   
+  vision_data.append({'face': face})  
 
 #### TEXT DETECTION ######
 def textDetection():
@@ -70,9 +69,7 @@ def textDetection():
       texts.append(text)
       print(text)
   
-  with open('vision-data/texts.json', 'w') as f:
-    json.dump(texts, f)
-
+  vision_data.append({'texts': texts})
 
 #### OBJECTS DETECTION ######
 def objectDetection():
@@ -88,11 +85,14 @@ def objectDetection():
     objects.append({'name': object_.name, 'confidence': object_.score})
     print({'name': object_.name, 'confidence': object_.score})
   
-  with open('vision-data/objects.json', 'w') as f:
-    json.dump(objects, f)
+  vision_data.append({'objects': objects})
 
 
 labelDetection()
 objectDetection()
 textDetection()
 faceDetection()
+
+
+with open(f'vision-data/{imageID}.json', 'w') as f:
+  json.dump(vision_data, f)
