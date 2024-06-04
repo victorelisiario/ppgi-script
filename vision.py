@@ -3,14 +3,14 @@ import json
 
 from google.cloud import vision
 
-#ENVIRONMENT KEY
+#KEY
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'vison-key.json'
 
 # Instantiates a client
 client = vision.ImageAnnotatorClient()
 
 
-file_uri = 'https://f.i.uol.com.br/fotografia/2024/05/30/17170776426658868ab2031_1717077642_3x2_lg.jpg'
+file_uri = 'https://p2.trrsf.com/image/fget/cf/306/168/smart/images.terra.com/2024/05/27/1496157463-greve-taxistas-sao-jose-dos-pinhais-aeroporto-2.jpg'
 
 image = vision.Image()
 image.source.image_uri = file_uri
@@ -93,3 +93,6 @@ def objectDetection():
 
 
 labelDetection()
+objectDetection()
+textDetection()
+faceDetection()
