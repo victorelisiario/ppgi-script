@@ -5,26 +5,7 @@ from selenium.webdriver.common.by import By
 import requests, imghdr, csv, json, time, os, uuid
 
 pages, pagesID = [
-  "https://oglobo.globo.com/fotogalerias/noticia/2023/10/09/guerra-entre-hamas-e-israel-veja-fotos-do-conflito.ghtml",
-  "https://www.terra.com.br/noticias/mundo/guerra-israel-x-hamas-veja-os-principais-acontecimentos-dos-ultimos-dias,b0a05859054b298f111e6d65a37d9b195byqn5pf.html",
-  "https://noticias.uol.com.br/internacional/ultimas-noticias/2023/11/01/guerra-em-israel-hoje-111-veja-novas-noticias-e-videos.htm",
-  "https://agenciabrasil.ebc.com.br/internacional/noticia/2023-10/mais-de-6-mil-pessoas-morreram-na-guerra-entre-israel-e-hamas",
-  "https://agenciabrasil.ebc.com.br/internacional/noticia/2023-10/israel-bombardeia-gaza-e-numero-de-mortos-em-nova-guerra-passa-de-900#",
-  "https://g1.globo.com/jornal-nacional/noticia/2024/05/31/onda-de-calor-extremo-provoca-ao-menos-50-mortes-na-india.ghtml",
-  "https://www.cnnbrasil.com.br/internacional/onda-de-calor-na-india-mata-pelo-menos-33-pessoas/",
-  "https://noticias.uol.com.br/ultimas-noticias/ansa/2024/06/01/calor-extremo-na-india-mata-85-em-24-horas.htm",
-  "https://www.bbc.com/portuguese/articles/cp05gz25r9po",
-  "https://www.uol.com.br/ecoa/noticias/rfi/2024/05/29/calor-extremo-india-registra-recorde-de-523c-e-governo-raciona-agua.htm",
-  "https://sbtnews.sbt.com.br/noticia/brasil/rio-grande-do-sul-chega-a-15-mortes-por-leptospirose-apos-enchentes",
-  "https://veja.abril.com.br/brasil/enchentes-castigam-populacao-no-sul-do-pais-neste-final-de-semana",
-  "https://g1.globo.com/sp/vale-do-paraiba-regiao/noticia/2024/06/05/sao-luiz-do-paraitinga-sera-a-primeira-cidade-de-sp-a-receber-novo-sistema-de-alerta-de-enchentes.ghtml",
-  "https://g1.globo.com/rs/rio-grande-do-sul/noticia/2024/06/08/entenda-como-funcionarao-cidades-provisorias-no-rs-apos-enchentes-especialistas-criticam-proposta-por-falta-de-dialogo.ghtml",
-  "https://www.cnnbrasil.com.br/nacional/enchentes-no-rs-compare-imagens-do-google-maps-de-antes-e-depois-das-chuvas/",
-  "https://www.correiobraziliense.com.br/euestudante/educacao-basica/2024/05/6864043-a-gente-vai-radicalizar-diz-sindicatos-sobre-ultimato-do-governo.html",
-  "https://gcmais.com.br/noticias/2024/05/17/professores-das-universidades-federais-do-ce-rejeitam-nova-proposta-do-governo-e-seguem-em-greve/",
-  "https://www.correiobraziliense.com.br/euestudante/ensino-superior/2024/06/6872565-professores-se-organizam-apos-reabertura-das-negociacoes-com-o-governo.html",
-  "https://oglobo.globo.com/opiniao/editorial/coluna/2024/06/greve-nas-federais-passou-do-limite.ghtml",
-  "https://iclnoticias.com.br/governo-greve-da-educacao-federal/"
+  "https://www.netshoes.com.br/p/bicicleta-aro-29-gti-aluminio-21-velocidades-freio-a-disco-original-mtb-kw-suspensao-com-garantia-verde+agua-AEE-0252-218",
 ], []
 
 
